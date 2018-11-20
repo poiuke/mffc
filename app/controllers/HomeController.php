@@ -12,7 +12,7 @@ class HomeController extends BaseController{
         /*$row = Article::first();
         require dirname(__FILE__)."/../views/home.php";*/
         $this->view = View::make('home')->with('article',Article::first())->withTitle('MFFC :-D')->withFunc1('OK!');
-        //$this->mail = Mail::to('2649966565@qq.com')->from('youq <154460710@qq.com>')->title('hello')->content('hello world');
+		
         Redis::set('key1','value1',10,'s');
         echo Redis::get('key1');
     }
